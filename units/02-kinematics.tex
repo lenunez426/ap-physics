@@ -1,0 +1,165 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+\section{Kinematics}
+
+\subsection{Displacement}
+
+\subsubsection*{Position}
+
+In order to describe the motion of an object, you must first be able to describe its \gls{position}---where it is at any particular time. More precisely, you need to specify its position relative to a convenient reference frame. Earth is often used as a reference frame, and we often describe the position of an object as it relates to stationary objects in that reference frame. For example, a rocket launch would be described in terms of the position of the rocket with respect to the Earth as a whole, while a professor's position could be described in terms of where she is in relation to the nearby white board. (See Figure ?.??.) In other cases, we use reference frames that are not stationary but are in motion relative to the Earth. To describe the position of a person in an airplane, for example, we use the airplane, not the Earth, as the reference frame. (See Figure ??.?.)
+
+\subsubsection*{Displacement}
+
+If an object moves relative to a reference frame (for example, if a professor moves to the right relative to a white board or a passenger moves toward the rear of an airplane), then the object's position changes. This change in position is known as \gls{displacement}. The word “displacement” implies that an object has moved, or has been displaced.
+
+\vspace{1ex}
+
+\begin{mdframed}[backgroundcolor=black!10]
+    \textbf{Displacement}
+
+    \vspace{1ex}
+    
+    Displacement is the \textit{change in position} of an object:
+
+    \begin{equation} \label{PhLnzc}
+        \Delta{x} = x_f - x_0
+    \end{equation}
+
+    where $\Delta{x}$ is displacement, $x_f$ is final position, and $x_0$ is initial position.
+\end{mdframed}
+
+In this text the upper case Greek letter $\Delta$ (delta) always means “change in” whatever quantity follows it; thus, $\Delta{x}$ means \textit{change in position}. Always solve for displacement by subtracting initial position  $x_0$ from final position $x_f$.
+
+\vspace{1em}
+ .
+Note that the SI unit for displacement is the meter (m) (see Physical Quantities and Units), but sometimes kilometers, miles, feet, and other units of length are used. Keep in mind that when units other than the meter are used in a problem, you may need to convert them into meters to complete the calculation.
+
+\vspace{1em} % 2 Figures
+
+Note that displacement has a direction as well as a magnitude. The professor's displacement is \SI{2.0}{m} to the right, and the airline passenger's displacement is \SI{4.0}{m} toward the rear. In one-dimensional motion, direction can be specified with a plus or minus sign. When you begin a problem, you should select which direction is positive (usually that will be to the right or up, but you are free to select positive as being any direction). The professor's initial position is $x_0 = \SI{1.5}{m}$ and her final position is $x_f = \SI{3.5}{m}$. Thus her displacement is
+
+\begin{equation*}
+    \Delta{x} = x_f - x_0 = \SI{3.5}{m} - \SI{1.5}{m} = +\SI{2.0}{m}
+\end{equation*}
+
+In this coordinate system, motion to the right is positive, whereas motion to the left is negative. Similarly, the airplane passenger's initial position is $x_0= \SI{6.0}{m}$ and his final position is  $x_f = \SI{2.0}{m}$, so his displacement is
+
+\begin{equation*}
+    \Delta{x} = x_f - x_0 = \SI{2.0}{m} - \SI{6.0}{m} = -\SI{4.0}{m}
+\end{equation*}
+
+His displacement is negative because his motion is toward the rear of the plane, or in the negative $x$ direction in our coordinate system.
+
+\subsubsection*{Distance}
+
+Although displacement is described in terms of direction, distance is not. \Gls{distance} is defined to be the magnitude or size of displacement between two positions. Note that the distance between two positions is not the same as the distance traveled between them. \Gls{distance traveled} is the total length of the path traveled between two positions. Distance has no direction and, thus, no sign. For example, the distance the professor walks is \SI{2.0}{m}. The distance the airplane passenger walks is \S{4.0}{m}.
+
+\vspace{1ex}
+
+\begin{mdframed}[backgroundcolor=black!10]
+    \textbf{MISCONCEPTION ALERT: DISTANCE TRAVELED VS. MAGNITUDE OF DISPLACEMENT}
+
+    \vspace{1ex}
+    
+    It is important to note that the distance traveled, however, can be greater than the magnitude of the displacement (by magnitude, we mean just the size of the displacement without regard to its direction; that is, just a number with a unit). For example, the professor could pace back and forth many times, perhaps walking a distance of \SI{150}{m} during a lecture, yet still end up only \SI{2.0}{m} to the right of her starting point. In this case her displacement would be $+\SI{2.0}{m}$, the magnitude of her displacement would be \SI{2.0}{m}, but the distance she traveled would be \SI{150}{m}. In kinematics we nearly always deal with displacement and magnitude of displacement, and almost never with distance traveled. One way to think about this is to assume you marked the start of the motion and the end of the motion. The displacement is simply the difference in the position of the two marks and is independent of the path taken in traveling between the two marks. The distance traveled, however, is the total length of the path taken between the two marks.
+\end{mdframed}
+
+\begin{example} \label{bcBeYE}
+    A cyclist rides \SI{3}{km} west and then turns around and rides \SI{2}{km} east. (a) What is her displacement? 
+\end{example}
+
+\Solution Although we are not given initial or final positions, we are given two separate displacements. If we define east as the positive direction, and west as the negative, as shown in the figure below, then the two displacements are
+
+\begin{equation*}
+    \Delta{x_1} = -\SI{3.0}{km} \quad \text{and} \quad \Delta{x_2} = +\SI{2.0}{km}
+\end{equation*}
+
+\begin{center}
+    \begin{tikzpicture}
+    \begin{axis}[width=15cm,
+        axis lines = left,
+        axis y line=none,
+        xlabel = {Position (m)},
+        ymin=0, ymax=12, 
+        xmin=-4, xmax=4,
+        ticks=none,
+        clip=false,
+        ]
+        \node[right] at (4,0) {E ($+x$)};
+        \node[left] at (-4,0) {W ($-x$)};
+        \node[above] at (0,0) {\huge \faBicycle};
+        \draw[->] (0,1) node[gray,right] {$x_0$} -- ++(axis direction cs: -3,0) node[above,pos=0.5] {$\Delta{x_1} = -\SI{3.0}{km}$};
+        \draw[->] (-3,1.75) -- ++(axis direction cs: 2,0) node[above,pos=0.5] {$\Delta{x_2} = +\SI{2.0}{m}$} node[gray,right] {$x_f$};
+    \end{axis}
+    \end{tikzpicture}
+\end{center}
+
+The total displacement is found by summing the object's individual displacements as
+
+\begin{equation*}
+    \Delta{x} = \Delta{x_1} + \Delta{x_2} = -\SI{3.0}{km} + \SI{2.0}{km} = -\SI{1.0}{km}
+\end{equation*}
+
+The cyclist's displacement is $-\SI{1.0}{km}$, or 1.0 kilometer to the west of their original position. 
+
+\endsolution    
+
+\vspace{1ex}
+
+\begin{example}
+   What distance does the cyclist from Example \ref{bcBeYE} ride? 
+\end{example}
+
+\Solution To find her distance traveled, we may take the sum the \textit{magnitudes} (i.e., absolute values) of each displacement:
+
+\begin{equation*}
+    \text{distance traveled} = \lvert \Delta{x_1} \rvert + \lvert \Delta{x_2} \rvert
+        = \lvert -3 \rvert + \lvert 2 \rvert 
+        = 3 + 2 = 5
+\end{equation*}
+
+Therefore, her total distance traveled is \SI{5.0}{km}.
+
+\endsolution
+
+\vspace{1ex}
+
+\begin{example}
+    What is the magnitude of the cyclist's displacement from Example \ref{bcBeYE}?
+\end{example}
+
+\Solution In Example \ref{bcBeYE}, we calculated a displacement of $\Delta{x} = -\SI{1.0}{km}$. The magnitude of this displacement is given by the absolute value:
+
+\begin{equation*}
+    \text{magnitude of displacement} = \lvert \Delta{x} \rvert = \lvert -\SI{1.0}{km} \rvert = \SI{1.0}{km}
+\end{equation*}
+
+Since taking the absolute value is effectively dropping the negative sign, the magnitude (or size) of her displacement is 1.0 kilometer.
+
+\endsolution
+
+\subsection{Vectors, Scalars, and Coordinate Systems}
+
+What is the difference between distance and displacement? Whereas displacement is defined by both direction and magnitude, distance is defined only by magnitude. Displacement is an example of a vector quantity. Distance is an example of a scalar quantity. A vector is any quantity with both magnitude and direction. Other examples of vectors include a velocity of 90 km/h east and a force of 500 newtons straight down.
+
+The direction of a vector in one-dimensional motion is given simply by a plus  (+)
+  or minus  (−)
+  sign. Vectors are represented graphically by arrows. An arrow used to represent a vector has a length proportional to the vector’s magnitude (e.g., the larger the magnitude, the longer the length of the vector) and points in the same direction as the vector.
+
+Some physical quantities, like distance, either have no direction or none is specified. A scalar is any quantity that has a magnitude, but no direction. For example, a  20ºC
+  temperature, the 250 kilocalories (250 Calories) of energy in a candy bar, a 90 km/h speed limit, a person’s 1.8 m height, and a distance of 2.0 m are all scalars—quantities with no specified direction. Note, however, that a scalar can be negative, such as a  −20ºC
+  temperature. In this case, the minus sign indicates a point on a scale rather than a direction. Scalars are never represented by arrows.
+
+\subsection{Time, Velocity, and Speed}
+
+\subsection{Acceleration}
+
+
+
+
+
+
+
+
+\end{document}
